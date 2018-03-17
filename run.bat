@@ -1,2 +1,3 @@
-for /f "tokens=5" %%a in ('netstat -aon ^| find ":9090" ^| find "LISTENING"') do taskkill /f /pid %%a
+taskkill /f /fi "WindowTitle eq  demo-devops" /t
+title demo-devops
 call mvn spring-boot:run
