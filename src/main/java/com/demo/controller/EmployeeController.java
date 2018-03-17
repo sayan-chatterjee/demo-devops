@@ -26,21 +26,6 @@ public class EmployeeController {
 		return "Hello "
 				+ "Sayan!!";
 	}
-	
-	@GetMapping("/getAllPerson")
-	public Page<Person> getPerson(){
-		Page<Person> list = personRepository.findAll(PageRequest.of(0, 2));
-		//System.out.println(personRepository.findAll());
-		return list;
-		
-	}
-	
-	@PostMapping("/create")
-	public Person create(){
-		Person person = personRepository.save(new Person("1","rt","jk"));
-		//System.out.println(personRepository.findAll());
-		return person;
-		
-	}
+
 	
 }
